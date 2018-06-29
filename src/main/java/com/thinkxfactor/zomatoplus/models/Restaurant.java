@@ -14,26 +14,28 @@ import javax.persistence.Column;
 	@GeneratedValue
 	@Column(name="restaurant_id")
 	private long id;
-	@Column(name="city")
-	private String city;
+	
 	@Column(name="name")
 	private String name;
-	@Column(name="address")
-	private String address;
-	@Column(name="contact")
-	private String contact;
 	@Column(name="description")
 	private String description;
+	
+	@Column(name="contact")
+	private String contact;
+	
 	@Column(name="website")
 	private String website;
-	@Column(name="like_count")
-	private String like_count;
+	@Column(name="city")
+	private String city;
+	@Column(name="address")
+	private String address;
+	
 	public Restaurant()
 	{
 		
 	}
 	public Restaurant(long id, String city, String name, String address, String contact, String description,
-			String website, String like_count) {
+			String website) {
 		super();
 		this.id = id;
 		this.city = city;
@@ -42,7 +44,7 @@ import javax.persistence.Column;
 		this.contact = contact;
 		this.description = description;
 		this.website = website;
-		this.like_count = like_count;
+		
 	}
 	public long getId() {
 		return id;
@@ -86,10 +88,5 @@ import javax.persistence.Column;
 	public void setWebsite(String website) {
 		this.website = website;
 	}
-	public String getLike_count() {
-		return like_count;
-	}
-	public void setLike_count(String like_count) {
-		this.like_count = like_count;
-	}
+	
 }

@@ -38,7 +38,7 @@ public class RestaurantController {
 		return persistedAddItem;
 	}
 
-	@GetMapping("/getall")
+	@GetMapping("/getAll")
 	public List<Restaurant> getAll(){
 		List<Restaurant> listofrestaurants=restaurantRepository.findAll();
 		return listofrestaurants;
